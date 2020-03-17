@@ -6,23 +6,16 @@
 // 또한 양의정수와 음의정수의 순서에는 변함이 없어야 한다.
 
 const list = [-1, 3, -3, 2, -2, 1, -4, 4]
-let mNum = [];
-let pNum = [];
-let ans = [];
+let mNum = []
+,   pNum = []
+,   ans = []
 
 list.forEach(e => {
-    if (e >= 0) {
-        pNum.push(e)
-    } else {
-        mNum.push(e)
-    }
+    if (e >= 0) pNum.push(e)
+    else        mNum.push(e)
 })
 
-mNum.forEach(e => {
-    ans.push(e)
-})
-pNum.forEach(e => {
-    ans.push(e)
-})
+mNum.forEach(e => { ans.push(e) })
+pNum.forEach(e => { ans.push(e) })
 
 console.log(ans)

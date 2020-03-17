@@ -11,31 +11,22 @@ sample outputs: true false false true false
 
 const arg = process.argv
 let getArg = arg[2]
-let goAndStop = true
-let distinction //판별하다
-let charCnt = 0;
-let charArr = []
+,   goAndStop = true
+,   distinction //판별하다
+,   charCnt = 0
+,   charArr = []
 
 console.log("getArg = ", getArg)
 
 while (goAndStop) {
     let char = getArg.charAt(charCnt)
-    if (char == "" || char == undefined) {
-        goAndStop = false
-    } else {
-        charArr.push(char)
-    }
+    if (char == "" || char == undefined) goAndStop = false
+    else charArr.push(char)
     charCnt++
 }
-//console.log("charArr = ", charArr)
 
 let setCharArr = new Set(charArr)
-//console.log("setCharArr = ", setCharArr)
-//console.log(charArr.length, setCharArr.size)
+if (charArr.length === setCharArr.size) distinction = true
+else distinction = false
 
-if (charArr.length === setCharArr.size) {
-    distinction = true
-} else {
-    distinction = false
-}
 console.log("distinction = ", distinction)

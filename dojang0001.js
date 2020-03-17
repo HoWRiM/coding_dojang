@@ -2,13 +2,13 @@
 // 1000미만의 자연수에서 3,5의 배수의 총합을 구하라.
 
 
-let range = 1000;
-let sum = 0;
+let range = 1000
+let sum = 0
 
 for (let i = 1; i < range; i++) {
     if (i%3 === 0 || i%5 === 0) {
-        sum = sum + i;
+        sum = sum + i
     }
 }
 
-console.log(sum);
+console.log(sum)

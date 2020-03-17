@@ -8,34 +8,26 @@
 // 23:59
 
 let time = []
-let onOff = true
-let h = 0
-let hText = ""
-let m = ""
-let timeText = ""
+,   onOff = true
+,   h = 0
+,   hText = ""
+,   m = ""
+,   timeText = ""
 
 while (onOff) {
-    if (h < 10) {
-        hText = "0" + h
-    } else {
-        hText = h + ""
-    }
+    if (h < 10) hText = "0" + h
+    else        hText = h + ""
 
     for (let i = 0; i < 60; i++) {
-        if (i < 10) {
-            m = "0" + i
-        } else {
-            m = i + ""
-        }
+        if (i < 10) m = "0" + i
+        else        m = i + ""
+
         timeText = hText + ":" + m
         time.push(timeText)
     }
 
-    if (timeText == "23:59") {
-        onOff = false
-    } else {
-        h++
-    }
+    if (timeText == "23:59") onOff = false
+    else h++
 }
 
 let getAns = 0
@@ -48,23 +40,15 @@ time.forEach(e => {
     if (hh.indexOf("3") !== -1) {
         let h1 = hh.substring(0,1)
         let h2 = hh.substring(1,2)
-        if (h1 == "3") {
-            getAns = getAns + (3 * 60 * 60)
-        }
-        if (h2 == "3") {
-            getAns = getAns + (3 * 60)
-        }
+        if (h1 == "3") getAns = getAns + (3 * 60 * 60)
+        if (h2 == "3") getAns = getAns + (3 * 60)
     }
 
     if (mm.indexOf("3") !== -1) {
         let m1 = mm.substring(0,1)
         let m2 = mm.substring(1,2)
-        if (m1 == "3") {
-            getAns = getAns + (3 * 10)
-        }
-        if (m2 == "3") {
-            getAns = getAns + 3
-        }
+        if (m1 == "3") getAns = getAns + (3 * 10)
+        if (m2 == "3") getAns = getAns + 3
     }
 })
 

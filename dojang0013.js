@@ -18,11 +18,8 @@ const ver1Arr = ver1.split(".")
 const ver2Arr = ver2.split(".")
 
 let getBigArr = []
-if (ver1Arr.length > ver2Arr.length) {
-    getBigArr = ver1Arr
-} else {
-    getBigArr = ver2Arr
-}
+if (ver1Arr.length > ver2Arr.length) getBigArr = ver1Arr
+else getBigArr = ver2Arr
 
 let getBigVer
 for (let i = 0; i < getBigArr.length; i++) {

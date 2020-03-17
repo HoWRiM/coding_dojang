@@ -8,17 +8,17 @@
 //m : 총건수
 //n : 한페이지에 보여줄 게시물수
 function getPageIndex(m, n) {
-    return Math.ceil(m/n);  //올림
+    return Math.ceil(m/n)  //올림
 }
 
 // 올림 함수(ceil)를 몰랐을 때
 function getPageIndex2(m, n) {
-    let pageIndex = parseInt(m/n);  //이정도는 알아야함.
+    let pageIndex = parseInt(m/n)  //이정도는 알아야함.
     if (m%n > 0) {
-        pageIndex++;
+        pageIndex++
     }
-    return pageIndex;
+    return pageIndex
 }
 
-console.log(getPageIndex2(10, 3));
-console.log(getPageIndex2(11, 10));
+console.log(getPageIndex2(10, 3))
+console.log(getPageIndex2(11, 10))

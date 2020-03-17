@@ -7,30 +7,30 @@
 // 인풋을 정수 n으로 받았을때, n 이하까지의 피보나치 수열을 출력하는 프로그램을 작성하세요
 
 function getFibonacciNum(n) {
-    let fibo = [];
-    const startNum = 0;
-    let frontNum = 0;
-    let nextNum;
-    let sumNum;
-    let onOff = true;    
+    const startNum = 0
+    let fibo = []
+    ,   frontNum = 0
+    ,   nextNum
+    ,   sumNum
+    ,   onOff = true
 
     while (onOff) {
         if (frontNum === 0) {
-            nextNum = startNum + 1;
-            fibo.push(frontNum);
-            fibo.push(nextNum);
+            nextNum = startNum + 1
+            fibo.push(frontNum)
+            fibo.push(nextNum)
         }
-        sumNum = frontNum + nextNum;
+        sumNum = frontNum + nextNum
     
         if (sumNum > n) {
-            console.log(fibo);
-            onOff = false;
+            console.log(fibo)
+            onOff = false
         } else {
-            fibo.push(sumNum);
-            frontNum = nextNum;
-            nextNum = sumNum;
+            fibo.push(sumNum)
+            frontNum = nextNum
+            nextNum = sumNum
         }
     }
 }
 
-getFibonacciNum(1000);
+getFibonacciNum(1000)

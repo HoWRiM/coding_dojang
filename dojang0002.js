@@ -4,14 +4,14 @@
 // A씨를 도와줄 수 있도록 소스코드내에 사용된 탭(Tab) 문자를 공백 4개(4 space)로 바꾸어 주는 프로그램을 작성하시오.
 
 
-let tabText5 = "                ";
-let spaceText = "                    ";
+let tabText5 = "                "
+let spaceText = "                    "
 let code = tabText5 + spaceText;
 
 if (code.indexOf("\t") === -1) {
-    code = code.replace("\t", "    ");
-    console.log(code);
+    code = code.replace("\t", "    ")
+    console.log(code)
 } else {
-    console.log("no");
+    console.log("no")
 }
 
